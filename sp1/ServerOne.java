@@ -21,7 +21,7 @@ class ServerOne extends Router {
            //100 means local 99 means unknown
            int[][] r1 = {{0,2,1},{1,100,0},{2,0,1},{3,99,99}};
            // print the vals
-           printValues(r1, 1);
+           print99(r1, 1);
 
            //data receive
            int[][] r0 = new int[4][3];
