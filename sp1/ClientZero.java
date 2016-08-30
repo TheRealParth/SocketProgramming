@@ -14,7 +14,7 @@ class ClientZero extends Router{
         BufferedReader inFromServer =
                 new BufferedReader(new
                 InputStreamReader(clientSocket.getInputStream()));
-        //100 means local 200 means unknown
+        //100 means local 99 means unknown
         int[][] r0= {{0, 100,0},{1,0,1},{2,1,3},{3,2,7}};
 
         for(int i = 0; i<r0.length; i++){
@@ -32,7 +32,7 @@ class ClientZero extends Router{
           uV[i][2] = inFromServer.read();
 	       }
 
-         printValues(uV, 1);
+         print99(uV, 1);
 
 		clientSocket.close();
 		System.out.println("Finished.\n");
