@@ -18,8 +18,8 @@ class ServerOne extends Router {
            DataOutputStream  outToClient =
            new DataOutputStream(cS.getOutputStream());
 
-           //100 means local 200 means unknown
-           int[][] r1 = {{0,2,1},{1,100,0},{2,0,1},{3,200,200}};
+           //100 means local 99 means unknown
+           int[][] r1 = {{0,2,1},{1,100,0},{2,0,1},{3,99,99}};
            // print the vals
            printValues(r1, 1);
 
@@ -40,11 +40,11 @@ class ServerOne extends Router {
 
 		  //Update the values
            System.out.print("\n");
-           System.out.print("Sending values of router 0...\n");
-           for (int i = 0; i<r0.length;i++){
-        		   outToClient.writeByte(r0[i][0]);
-               outToClient.writeByte(r0[i][1]);
-               outToClient.writeByte(r0[i][2]);
+           System.out.print("Sending values of router 1...\n");
+           for (int i = 0; i<4;i++){
+        		   outToClient.writeByte(r1[i][0]);
+               outToClient.writeByte(r1[i][1]);
+               outToClient.writeByte(r1[i][2]);
            }
           System.out.print("Values sent. \n");
           System.out.println("\nDone!...\n");
