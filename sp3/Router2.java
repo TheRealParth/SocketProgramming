@@ -32,9 +32,9 @@ class Router2 extends Router{
                uV[i][2] = inFromServer.read();
                uV[i][0] = inFromServer.read();
      	       }
-             printValues(uV, 2);
-            }
 
+            }
+printValues(uV, 1);
 
 		clientSocket.close(); //Close connection
 
