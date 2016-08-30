@@ -7,7 +7,7 @@ class Router2 extends Router{
         System.out.println("Connecting to address:" + ADDRESS + "  port: " + PORT);
         Socket clientSocket = new Socket(ADDRESS, PORT); //Changed the Host Name and Port Number
 
-        int[][] router2Value = {{0,2,3},{1,0,1},{2,100,0},{3,2,2}};
+        int[][] router2Value = {{0,2,3},{1,0,1},{2,100,0},{3,1,2}};
         DataOutputStream outToServer =
           new DataOutputStream(clientSocket.getOutputStream());
 
