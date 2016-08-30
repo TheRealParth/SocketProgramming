@@ -6,7 +6,7 @@ class Router3 extends Router{
     {
         System.out.println("Connecting to address:" + ADDRESS + "  port: " + PORT);
         Socket clientSocket = new Socket(ADDRESS, PORT);
-        int[][] router3Value = {{0,0,7},{1,200,0},{2,2,2},{3,100,0}};
+        int[][] router3Value = {{0,0,7},{1,99,99},{2,2,2},{3,100,0}};
         DataOutputStream outToServer =
           new DataOutputStream(clientSocket.getOutputStream());
           printValues(router3Value, 3);

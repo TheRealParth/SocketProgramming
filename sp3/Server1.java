@@ -5,7 +5,7 @@ class Server1 extends Router {
 		int[][] router0Values = new int[4][3];
 		int[][] router2Values = new int[4][3];
 		int[][] router3Values = new int[4][3];
-		int[][] router1Values = {{0,2,1},{1,100,0},{2,0,1},{3,200,200}};
+		int[][] router1Values = {{0,2,1},{1,100,0},{2,0,1},{3,99,99}};
 		int[][] updatedValues = new int[4][3];
 
 		System.out.println("Server is Running");
@@ -63,7 +63,7 @@ class Server1 extends Router {
 				for (int j = 0; j <3; j++){
 					updatedValues[i][j]=router0Values[i][j];
 					if((router0Values[i][0] == router1Values[i][0])&&(router1Values[i][1]!=100)&&(i!=0)
-							&&(router0Values[i][2]>router1Values[i][2]+router0Values[1][2]  || updatedValues[i][2]==200)){
+							&&(router0Values[i][2]>router1Values[i][2]+router0Values[1][2]  || updatedValues[i][2]==99)){
 						updatedValues[i][j] = router1Values[i][j];
 						updatedValues[i][2]= router0Values[1][2]+router1Values[i][2];
 					}
@@ -93,7 +93,7 @@ class Server1 extends Router {
 			for (int i = 0; i <4; i++){
 				for (int j = 0; j <3; j++){
 					if((updatedValues[i][0] == router2Values[i][0])&&(router2Values[i][1]!=100)&&(i!=0)
-							&&(updatedValues[i][2]>router2Values[i][2]+router0Values[2][2]  || updatedValues[i][2]==200)){
+							&&(updatedValues[i][2]>router2Values[i][2]+router0Values[2][2]  || updatedValues[i][2]==99)){
 						updatedValues[i][j] = router2Values[i][j];
 						updatedValues[i][2]= router0Values[2][2]+router2Values[i][2];
 					}
@@ -109,7 +109,7 @@ class Server1 extends Router {
 			for (int i = 0; i <updatedValues.length; i++){
 				for (int j = 0; j <updatedValues[i].length; j++){
 					if((updatedValues[i][0] == router2Values[i][0])&&(router2Values[i][1]!=100)&&(i!=0)
-							&&(updatedValues[i][2]>router2Values[3][2]+router1Values[2][2]+router0Values[1][2] || updatedValues[i][2]==200)){
+							&&(updatedValues[i][2]>router2Values[3][2]+router1Values[2][2]+router0Values[1][2] || updatedValues[i][2]==99)){
 						updatedValues[i][j] = router2Values[i][j];
 						updatedValues[i][2]= router0Values[1][2]+router1Values[2][2]+router2Values[3][2];
 					}
