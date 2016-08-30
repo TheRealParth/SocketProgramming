@@ -4,7 +4,7 @@ class Router3 extends Router{
 
     public static void main(String[] args) throws Exception
     {
-        System.out.println("Client is Running");
+        System.out.println("Connecting to address:" + ADDRESS + "  port: " + PORT);
         Socket clientSocket = new Socket(ADDRESS, PORT);
         int[][] router3Value = {{0,0,7},{1,200,0},{2,2,2},{3,100,0}};
         DataOutputStream outToServer =

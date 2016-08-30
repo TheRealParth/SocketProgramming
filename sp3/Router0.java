@@ -4,7 +4,7 @@ class Router0 extends Router {
 
     public static void main(String[] args) throws Exception
     {
-        System.out.println("Client is Running");
+        System.out.println("Connecting to address:" + ADDRESS + "  port: " + PORT);
         Socket clientSocket = new Socket(ADDRESS, PORT); //Changed the Host Name and Port Number
 
         int[][] router0Value = {{0,100,0},{1,0,1},{2,1,3},{3,2,7}};

@@ -1,6 +1,6 @@
 class Router {
   //function used to take all the values and print to screen.
-  public static final String ADDRESS = "127.0.0.1";
+  public static final String ADDRESS = "128.235.24.121";
   public static final Integer PORT = 54321;
   public static void printValues(int[][] r0, int routerNum){
     System.out.println("---------------------------------------");

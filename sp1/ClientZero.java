@@ -4,7 +4,8 @@ import java.net.*;
 class ClientZero extends Router{
     public static void main(String[] args) throws Exception
     {
-        System.out.print("Router 0 running\n");
+      System.out.println("Connecting to address:" + ADDRESS + "  port: " + PORT);
+        System.out.print("\n\nRouter 0 running\n");
         Socket clientSocket = new Socket(ADDRESS, 54321);
 
         DataOutputStream outToServer =
